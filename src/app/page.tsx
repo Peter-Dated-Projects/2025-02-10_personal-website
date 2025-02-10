@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 import HeaderSection from "@/sections/Header";
+import AboutSection from "@/sections/About";
 import ContactSection from "@/sections/Contact";
 
 
@@ -17,10 +18,14 @@ export default function Home() {
                 </div>
 
                 <div style={{ padding: '20px' }}>
+                    <AboutSection />
+                </div>
+
+                <div style={{ padding: '20px' }}>
                     <ContactSection />
                 </div>
 
-            </main>
+            </main >
 
             <footer className={styles.footer}>
                 <a
@@ -66,6 +71,6 @@ export default function Home() {
                     Go to nextjs.org →
                 </a>
             </footer>
-        </div>
+        </div >
     );
 }
