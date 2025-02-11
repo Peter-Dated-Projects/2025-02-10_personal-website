@@ -26,7 +26,7 @@ export default function HeaderSection() {
                     <p style={{ fontWeight: 'bold', fontSize: '20px' }}>Header</p>
                     <div style={{ width: '30px' }}></div>
                     <div className={styles.nav}>
-                        {names.map((name, index) => (
+                        {names.map((name, key) => (
                             HeaderCard(name)
                         ))}
                     </div>
