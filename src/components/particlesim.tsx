@@ -65,7 +65,8 @@ const ParticleBackground: React.FC = () => {
         particles.forEach((otherParticle) => {
           if (particle !== otherParticle) {
             const distance = Math.sqrt(
-              Math.pow(particle.x - otherParticle.x, 2) + Math.pow(particle.y - otherParticle.y, 2)
+              Math.pow(particle.x - otherParticle.x, 2) +
+                Math.pow(particle.y - otherParticle.y, 2)
             );
 
             if (distance < 100) {
@@ -75,8 +76,10 @@ const ParticleBackground: React.FC = () => {
         });
 
         // Bounce off the edges
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx = -particle.vx;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy = -particle.vy;
+        if (particle.x < 0 || particle.x > canvas.width)
+          particle.vx = -particle.vx;
+        if (particle.y < 0 || particle.y > canvas.height)
+          particle.vy = -particle.vy;
 
         // Draw the particle as a circle
         ctx.beginPath();
@@ -125,7 +128,7 @@ const ParticleBackground: React.FC = () => {
         height: "100%",
         // Optional: if you want to keep a gradient as a base background behind the particles
         background:
-          "linear-gradient(to right, var(--primary-color-one-light), var(--primary-color-two-light))",
+          "linear-gradient(to right, var(--primary-color-one), var(--primary-color-two-light))",
       }}
     />
   );

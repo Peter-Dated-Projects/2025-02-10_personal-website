@@ -5,7 +5,10 @@ import styles from "./About.module.css";
 
 export default function AboutSection() {
   return (
-    <div id={"AboutSection"} className={`section-container ${styles["container-grid"]}`}>
+    <div
+      id={"AboutSection"}
+      className={`section-container ${styles["container-grid"]}`}
+    >
       <div className={styles["left-container"]}>
         <p className={"section-title"}>A little about me...</p>
         <div>
@@ -13,7 +16,7 @@ export default function AboutSection() {
             Hey! Fancy seeing you here <br></br>
             <span
               style={{
-                color: "var(--primary-color-one-light)",
+                color: "var(--primary-color-one)",
                 fontSize: "17px",
                 fontWeight: "bold",
               }}
@@ -23,7 +26,13 @@ export default function AboutSection() {
             <br></br>
           </p>
           <p style={{ paddingBottom: "15px" }}>I'm a bit of a...</p>
-          <ul style={{ listStyleType: "none", lineHeight: "0.8", paddingLeft: "10px" }}>
+          <ul
+            style={{
+              listStyleType: "none",
+              lineHeight: "0.8",
+              paddingLeft: "10px",
+            }}
+          >
             <li>⛷️ ski lover</li>
             <li>👾 game developer</li>
             <li>📚 full-stack dev</li>
@@ -34,7 +43,9 @@ export default function AboutSection() {
           </p>
           <br></br>
           <p style={{ fontWeight: "bold" }}>
-            <span className={"text-gradient-mask"}>Welcome to my personal website!</span>
+            <span className={"text-gradient-mask"}>
+              Welcome to my personal website!
+            </span>
           </p>
         </div>
       </div>

@@ -3,14 +3,18 @@
 :root {
   --default-font: "MonaSpace", monospace;
 
-  --primary-color-one-light: #00a5fd;
-  --primary-color-two-light: #7694ff;
-
-  --primary-color-one-dark: #0181d9;
-  --primary-color-two-dark: #0024aa;
+  --primary-color-one: #00a5fd;
+  --primary-color-two: #7694ff;
 
   --section-title-size: 28px;
   --section-title-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color-one-dark: #0181d9;
+    --primary-color-two-dark: #0024aa;
+  }
 }
 
 /* make every single div object have a box border */
@@ -40,8 +44,8 @@ div {
 .text-gradient-mask {
   background: linear-gradient(
     to right,
-    var(--primary-color-one-light),
-    var(--primary-color-two-light)
+    var(--primary-color-one),
+    var(--primary-color-two)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

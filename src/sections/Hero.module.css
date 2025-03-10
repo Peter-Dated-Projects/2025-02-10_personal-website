@@ -8,8 +8,8 @@
 .hero-background {
   background: linear-gradient(
     to right,
-    var(--primary-color-one-light),
-    var(--primary-color-two-light)
+    var(--primary-color-one),
+    var(--primary-color-two)
   );
   opacity: 0.5;
   position: absolute;
