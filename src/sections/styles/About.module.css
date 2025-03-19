@@ -1,0 +1,149 @@
+.container {
+  position: relative;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.8fr;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+
+  -webkit-box-reflect: below -100px linear-gradient(transparent, transparent 70%, rgba(0, 0, 0, 0.2)
+        100%);
+}
+
+.container-grid-reflection {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+  pointer-events: none; /* This makes the element not affect other objects in the DOM */
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.collage-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  grid-template-areas:
+    "circle circle . . "
+    "circle circle . . "
+    ". . . . ";
+
+  gap: 2px;
+}
+
+/* bottom section for transition */
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 100px;
+}
+
+.bottom-title {
+  font-size: 1rem;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottom-content {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: calc(50% + 100px);
+  z-index: -1;
+  opacity: 0.5;
+  pointer-events: none; /* This makes the element not affect other objects in the DOM */
+}
+
+.bottom-content-container {
+  height: 100%;
+  width: 100%;
+
+  mask-image: radial-gradient(circle, transparent, black);
+  -webkit-mask-image: radial-gradient(circle, transparent, black);
+}
+
+.collage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2px;
+  }
+
+  .container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom-title {
+    height: 500px;
+  }
+
+  .bottom-content {
+    top: calc(70%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collage-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+      "circle circle"
+      "circle circle";
+
+    gap: 2px;
+  }
+
+  .collage-image {
+    display: none;
+    height: 0px;
+  }
+}

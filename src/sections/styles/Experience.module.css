@@ -1,0 +1,20 @@
+.content-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+  border-radius: 5px;
+}
+
+.main-container {
+  display: block;
+  gap: 10px;
+  padding: 10px;
+}
+
+.experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2px;
+}

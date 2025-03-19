@@ -1,0 +1,66 @@
+.container-a {
+  border-radius: 10px;
+
+  font-family: var(--reading-font);
+  font-size: var(--description-text-size);
+  background: var(--single-card-background);
+  transition: transform 0.5s;
+
+  background: linear-gradient(135deg, rgba(65, 111, 255, 0.6), rgba(111, 255, 65, 0.6));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.container-b {
+  border-radius: 10px;
+
+  font-family: var(--reading-font);
+  font-size: var(--description-text-size);
+  background: var(--single-card-background);
+  transition: transform 0.5s;
+
+  background: linear-gradient(135deg, rgba(111, 255, 65, 0.6), rgba(65, 111, 255, 0.6));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.container-a:hover,
+.container-b:hover {
+  transform: scale(1.01);
+  transition: transform 0.5s;
+}
+
+.container-sub-parent {
+  padding: 3px;
+}
+
+.experience-viewer-item {
+  display: block;
+  min-height: 200px;
+
+  border-radius: 10px;
+  background: var(--background);
+}
+
+.experience-viewer-description-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  list-style-image: var(--triangle-svg);
+  color: white;
+  padding-left: 0px;
+  font-size: var(--description-text-size);
+  gap: 5px;
+}
+
+.experience-viewer-item-description {
+  padding: 0px 4px !important;
+  font-family: var(--default-font);
+}
+
+.experience-viewer-description-container {
+  position: relative;
+  display: flex;
+  margin-left: 20px;
+  font-family: var(--reading-font);
+}
