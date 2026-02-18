@@ -4,8 +4,31 @@ import "@/app/globals.css";
 import styles from "./styles/Projects.module.css";
 
 import { SingleCard, SingleCardProps } from "@/components/SingleCard";
+import { GitHubProjects } from "@/components/GitHubProjects";
 
 const cardProps = [
+  {
+    title: "Echo - Discord Transcription Chatbot",
+    description: [
+      "Arbitrated VRAM access between Whisper and Ollama by engineering a custom GPU Resource Manager using asyncio semaphores.",
+      "Orchestrated non-blocking audio transcoding and vector embedding via a custom event-driven job queue pipeline.",
+      "Enabled hardware-agnostic testing of GPU workflows by implementing Dependency Injection to decouple the Discord gateway from agentic logic.",
+    ],
+    image: "/projects/echo.png", // Placeholder
+    tags: ["Python", "AsyncIO", "Whisper", "Ollama", "Discord.py", "Docker"],
+    github: "https://github.com/Peter-Dated-Projects/echo", // Placeholder link
+  },
+  {
+    title: "StudyGarden - Digital Group Study App",
+    description: [
+      "Scaled a real-time WebSocket backend to 200+ concurrent connections on Cloud Run, utilizing Redis for sub-millisecond state synchronization.",
+      "Engineered a reactive data layer using TanStack Query and a custom Notion API wrapper to handle complex filtering and real-time live client updates for task syncing.",
+      "Streamlined deployment on Google Cloud Platform via containerization of an asyncio python server, arangodb, and postgres using a docker-compose script in a GCP Virtual Machine.",
+    ],
+    image: "/projects/studygarden.png", // Placeholder
+    tags: ["React", "TypeScript", "Python", "GCP", "Redis", "WebSocket", "TanStack Query"],
+    github: "https://github.com/Peter-Dated-Projects/studygarden", // Placeholder link
+  },
   {
     title: "Daily Vibez - cuHacking Submission",
     description: [
