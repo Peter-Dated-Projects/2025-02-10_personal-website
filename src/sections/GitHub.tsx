@@ -2,7 +2,6 @@
 
 import React from "react";
 import { GitHubCalendar } from "react-github-calendar";
-import { GitHubProjects } from "@/components/GitHubProjects";
 import styles from "./styles/GitHub.module.css";
 import "@/app/globals.css";
 
